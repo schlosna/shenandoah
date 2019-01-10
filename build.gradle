@@ -1,0 +1,15 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'idea'
+}
+
+repositories {
+    mavenCentral()
+}
+
+mainClassName = 'org.openjdk.shenandoah.OpenJdk9058853'
+
+dependencies {
+    compile 'com.lmax:disruptor:3.4.2'
+}
