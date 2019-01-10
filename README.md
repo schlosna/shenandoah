@@ -1,4 +1,4 @@
-Minimal Complete Verifiable Example (MCVE) repro for [JDK-9058853](https://bugs.openjdk.java.net/browse/JDK-9058853) OpenJDK 11 crash with Shenandoah GC on CentOS 7.
+Minimal Complete Verifiable Example (MCVE) repro for [https://bugs.openjdk.java.net/browse/JDK-8216364](https://bugs.openjdk.java.net/browse/JDK-8216364) OpenJDK 11 crash with Shenandoah GC on CentOS 7.
 
 In the interest of hardening Shenandoah GC, I wanted to see if folks here are interested in fixing this as we were able to create a minimal repro that quickly triggers the JIT crash consistently. Note that both the original bug sighting and repro are using LMAX disruptor 3.4.2 which relies heavily on sun.misc.unsafe and had [filed an issue there](https://github.com/LMAX-Exchange/disruptor/issues/251). Dropping in the [VarHandles based disruptor version](https://github.com/LMAX-Exchange/disruptor/tree/jdk9-varhandles) does not trigger the crash.
 
